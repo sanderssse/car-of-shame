@@ -1,0 +1,68 @@
+<<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Test Page</title>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="https://app.ecwid.com/script.js?9967568&data_platform=code" charset="utf-8"></script>
+  <script>Ecwid.init();</script>
+  
+  <style>
+    h1, h4 {
+      color: rgb(58, 15, 54);
+      font-family:Verdana, Geneva, Tahoma, sans-serif;
+    }
+    img {
+      max-width: 100%;
+      width: 700px;
+      height: auto;
+    }
+    .clicked-once {
+      cursor: default;
+    }
+    /*.ec-cart-item__control-inner {
+    display: none !important;
+    }
+    .form-control__arrow {
+      display: none !important;
+    }
+    .form-control__select-text {
+      color: black !important;
+      cursor: default !important;
+    }
+    select {
+      display: none !important;
+    }*/
+  </style>
+</head>
+<body>
+  <h1 id="header">Собери автомобиль!</h1>
+  <h4 id="instruction">Тебе понадобятся два колеса, лобовое стекло, фара и капот.</h4>
+
+  <img src="car.png" usemap="#car-map" id="carImg">
+  <p id="message"></p>
+
+  <map name="car-map">
+    <!-- Левое колесо -->
+    <area shape="circle" coords="225,288,43" href="#" id="741248041" onclick="handleClick(741248041, this); return false;">
+    <!-- Правое колесо -->
+    <area shape="circle" coords="482,288,43" href="#" id="741248041" onclick="handleClick(741248041, this); return false;">
+    <!-- Фара -->
+    <area shape="rect" coords="125,188,143,235" href="#" id="741238312" onclick="handleClick(741238312, this); return false;">
+    <!-- Лобовое стекло -->
+    <area shape="rect" coords="234,113,330,194" href="#" id="741248076" onclick="handleClick(741248076, this); return false;">
+    <!-- Капот -->
+    <area shape="rect" coords="150,188,225,244" href="#" id="741248075" onclick="handleClick(741248075, this); return false;">
+  </map>
+
+  <div class="ec-cart-widget"></div>
+  <div>
+  <script data-cfasync="false" type="text/javascript" src="https://app.ecwid.com/script.js?9967568&data_platform=code&data_date=2025-04-14" charset="utf-8"></script>
+  </div>
+
+  <script src="car_test.js"></script>
+
+  
+</body>
+</html>
+
